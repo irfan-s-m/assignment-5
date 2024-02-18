@@ -114,7 +114,7 @@
             cities, countries, and even continents.
           </p>
         </div>
-        <div class="bg-[#FFFFFF] flex">
+        <div class="bg-[#FFFFFF] flex rounded-2xl mt-12">
           <div class="flex-1">
             <div class="flex justify-between px-10 py-10">
               <div class="flex gap-4">
@@ -131,7 +131,7 @@
                 <p class="inter-font font-medium text-base text-[#1DD100]"><span>40</span> Seats left</p>
               </div>
             </div>
-            <div class="bg-[#F7F8F8] flex flex-col gap-6 px-10 py-10 mx-8 rounded-3xl">
+            <div class="bg-[#F7F8F8] flex flex-col gap-6 px-10 py-6 mx-8 rounded-3xl">
               <div class="flex justify-between">
                 <h6 class="text-base font-semibold text-[#03071299]">Route</h6>
                 <h6 class="text-base font-semibold text-[#030712]">Dhaka - Sylhet</h6>
@@ -143,9 +143,12 @@
               </div>
               <hr>
               <div class="flex gap-10 justify-center">
-                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Boarding Point - Laxmipur</div>
-                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Dropping Point - Bogura</div>
-                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Est. Time - 11 Hour</div>
+                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Boarding
+                  Point - Laxmipur</div>
+                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Dropping
+                  Point - Bogura</div>
+                <div class="bg-[#0307120D] inter-font text-sm font-medium text-[#030712CC] p-4 rounded-xl">Est. Time -
+                  11 Hour</div>
               </div>
             </div>
           </div>
@@ -156,6 +159,133 @@
             <h3 class="raleway-font text-2xl font-semibold">Per Seat</h3>
           </div>
         </div>
+      </div>
+      <div class="bg-[#FFFFFF] w-3/4 mx-auto flex gap-20 mt-20 p-10">
+        <!-- Seat arrangement div -->
+        <div>
+          <div class="flex flex-col gap-4">
+            <h2 class="raleway-font text-2xl font-bold">Select Your Seat</h2>
+            <hr>
+            <div class="flex justify-between">
+              <div class="flex gap-2">
+                <img src="images/seat-gray.png" alt="">
+                available
+              </div>
+              <div class="flex gap-2">
+                <img src="images/seat-green-filled.png" alt="">
+                <span class="text-[#1DD100]">Selected</span>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="flex justify-end mt-8">
+            <div class="flex w-28 bg-[#0307121A] p-2 justify-center rounded-xl">
+              <img src="images/steering.png" alt="">
+            </div>
+          </div>
+          <div class="flex mt-8 gap-16">
+            <div class="flex gap-12">
+              <div class="grid grid-cols-1 gap-4 justify-center items-center">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+                <div>F</div>
+                <div>G</div>
+                <div>H</div>
+                <div>I</div>
+                <div>J</div>
+              </div>
+              <div class="grid grid-cols-2 gap-8">
+                <button class="btn">A1</button>
+                <button class="btn">A2</button>
+                <button class="btn">B1</button>
+                <button class="btn">B2</button>
+                <button class="btn">C1</button>
+                <button class="btn">C2</button>
+                <button class="btn">D1</button>
+                <button class="btn">D3</button>
+                <button class="btn">E1</button>
+                <button class="btn">E2</button>
+                <button class="btn">F1</button>
+                <button class="btn">F2</button>
+                <button class="btn">G1</button>
+                <button class="btn">G2</button>
+                <button class="btn">H1</button>
+                <button class="btn">H2</button>
+                <button class="btn">I1</button>
+                <button class="btn">I2</button>
+                <button class="btn">J1</button>
+                <button class="btn">J2</button>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+              <button class="btn">A3</button>
+              <button class="btn">A4</button>
+              <button class="btn">B3</button>
+              <button class="btn">B4</button>
+              <button class="btn">C3</button>
+              <button class="btn">C4</button>
+              <button class="btn">D3</button>
+              <button class="btn">D4</button>
+              <button class="btn">E3</button>
+              <button class="btn">E4</button>
+              <button class="btn">F3</button>
+              <button class="btn">F4</button>
+              <button class="btn">G3</button>
+              <button class="btn">G4</button>
+              <button class="btn">H3</button>
+              <button class="btn">H4</button>
+              <button class="btn">I3</button>
+              <button class="btn">I4</button>
+              <button class="btn">J3</button>
+              <button class="btn">J4</button>
+            </div>
+          </div>
+        </div>
+        <!-- price div -->
+        <div class="flex-1">
+          <div class="flex flex-col gap-4 p-6">
+            <h2 class="raleway-font text-2xl font-bold">Select Your Seat</h2>
+            <hr>
+          </div>
+          <div class="bg-[#F7F8F8] rounded-2xl">
+            <div class="flex justify-between gap-6 px-12 py-4">
+              <h6 class="inter-font text-base font-medium">Seat<span id="seat-count-plus"></span>
+              </h6>
+              <h6 class="inter-font text-base font-medium">Class</h6>
+              <h6 class="inter-font text-base font-medium">Price</h6>
+            </div>
+            <hr>
+            <div id="seat-price" class="flex justify-between gap-6 px-12 py-4">
+              
+            </div>
+            <hr>
+            <div class="flex justify-between px-12 py-4">
+              <h6 class="inter-font text-base font-bold">Total Price</h6>
+              <h6 id="total-price" class="inter-font text-base font-bold">BDT <span id="total-price-span"></span></h6>
+            </div>
+            <div class="flex px-12 py-4 justify-center">
+              <input id="coupon-form" type="text" placeholder="Have any copupon?" class="rounded-tl-lg p-2 w-96">
+              <button id="coupon-btn" class="btn bg-[#1DD100] text-white">Apply</button>
+            </div>
+            <div class="flex justify-between px-12 py-4">
+              <h6 class="inter-font text-base font-bold">Grand Total</h6>
+              <h6 class="inter-font text-base font-bold">BDT <span id="grand-total"></span></h6>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
       </div>
     </section>
   </main>
