@@ -21,8 +21,7 @@ for (const seat of seatbuttons) {
         seat.setAttribute('disabled', true);
 
         // Seat Append
-        
-
+        createAppend('seat-table', 'p');
     })
 
 }
@@ -31,7 +30,19 @@ for (const seat of seatbuttons) {
 
 // innerText function
 function setInnerTextValue(id, text) {
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     element.innerText = text;
 }
 
+// create & append element function
+function createAppend(id1, id2) {
+    const element = document.getElementById(id1);
+    const createElement = document.createElement(id2);
+    const createElement2 = document.createElement('p')
+    const createElement3 = document.createElement('p')
+    createElement2.innerText = p1;
+    createElement3.innerText = p2;
+    element.appendChild(createElement);
+    element.appendChild(createElement2);
+    element.appendChild(createElement3);
+}
