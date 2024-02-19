@@ -52,27 +52,42 @@ for (const seat of seatbuttons) {
             const couponForm = document.getElementById('coupon-form');
             const coupon = couponForm.value;
             const hideCoupon = document.getElementById('coupon')
-                hideCoupon.classList.add('hidden');
+            hideCoupon.classList.add('hidden');
             if (coupon === 'NEW15') {
                 discountPrice = totalPrice * 0.15;
                 grandTotal = totalPrice - discountPrice;
                 document.getElementById('discount-price-span').innerText = discountPrice;
                 document.getElementById('grand-total').innerText = grandTotal;
-
             }
             else if (coupon === 'Couple 20') {
                 discountPrice = totalPrice * 0.20;
                 grandTotal = totalPrice - discountPrice;
                 document.getElementById('discount-price-span').innerText = discountPrice;
                 document.getElementById('grand-total').innerText = grandTotal;
-                
             }
-
+            else {
+                grandTotal = totalPrice;
+                document.getElementById('discount-price-span').innerText = discountPrice;
+                document.getElementById('grand-total').innerText = grandTotal;
+            }
         })
     })
-
 }
 
+// Modal main button enable
+const numberForm = document.getElementById('number-form');
+const numberFormValue = numberForm.value;
+if (numberFormValue.length > 1) {
+    const modalButton = document.getElementById('modal-main-btn');
+    modalButton.removeAttribute('disabled', true);
+}
+
+
+// Modal button reset
+const reset = document.getElementById('modal-btn');
+reset.addEventListener('click', function (){
+    window.location.reload();
+} )
 
 // innerText function
 function setInnerTextValue(id, text) {
