@@ -3,8 +3,9 @@ let seatAdd = 0;
 let seatPrice = 550;
 let discountPrice = 0;
 let totalPrice = 0;
-const p1 = "Economy";
-const p2 = "550";
+let grandTotal = 0;
+const p2 = "Economy";
+const p3 = 550;
 
 const seatbuttons = document.querySelectorAll(".seat");
 for (const seat of seatbuttons) {
@@ -21,7 +22,48 @@ for (const seat of seatbuttons) {
         seat.setAttribute('disabled', true);
 
         // Seat Append
-        createAppend('seat-table', 'p');
+        const seatTable = document.getElementById('seat-table');
+        const seatNameText = seat.innerText;
+        let createElement = document.createElement('p');
+        createElement.innerText = seatNameText;
+        let createElement2 = document.createElement('p');
+        createElement2.innerText = p2;
+        let createElement3 = document.createElement('p');
+        createElement3.innerText = p3;
+        seatTable.appendChild(createElement);
+        seatTable.appendChild(createElement2);
+        seatTable.appendChild(createElement3);
+
+        // Coupon button enable
+        if (seatAdd >= 4) {
+            const couponBtn = document.getElementById('coupon-btn');
+            couponBtn.removeAttribute('disabled', true);
+        }
+
+        // total Price
+        totalPrice = totalPrice + seatPrice;
+        document.getElementById('total-price-span').innerText = totalPrice;
+
+        // coupon discount
+        const couponBtn = document.getElementById('coupon-btn');
+        couponBtn.addEventListener('click', function () {
+            const couponForm = document.getElementById('coupon-form');
+            const coupon = couponForm.value;
+            if (coupon === 'NEW15') {
+                discountPrice = totalPrice * 0.15;
+                grandTotal = totalPrice - discountPrice;
+                console.log(discountPrice);
+                console.log(grandTotal);
+            }
+            else if (coupon === 'Couple 20') {
+                discountPrice = totalPrice * 0.20;
+                grandTotal = totalPrice - discountPrice;
+                console.log(discountPrice);
+                console.log(grandTotal);
+            }
+        })
+
+
     })
 
 }
@@ -32,17 +74,4 @@ for (const seat of seatbuttons) {
 function setInnerTextValue(id, text) {
     const element = document.getElementById(id);
     element.innerText = text;
-}
-
-// create & append element function
-function createAppend(id1, id2) {
-    const element = document.getElementById(id1);
-    const createElement = document.createElement(id2);
-    const createElement2 = document.createElement('p')
-    const createElement3 = document.createElement('p')
-    createElement2.innerText = p1;
-    createElement3.innerText = p2;
-    element.appendChild(createElement);
-    element.appendChild(createElement2);
-    element.appendChild(createElement3);
 }

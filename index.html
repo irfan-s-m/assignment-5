@@ -258,17 +258,22 @@
               <h6 class="inter-font text-base font-medium">Price</h6>
             </div>
             <hr>
-            <div id="seat-table" class="flex justify-between gap-6 px-12 py-4">
-              
+            <div id="seat-table" class="grid grid-cols-3 gap-6 px-12 py-4">
+              <!-- Here the updated Seat list will append -->
             </div>
             <hr>
             <div class="flex justify-between px-12 py-4">
               <h6 class="inter-font text-base font-bold">Total Price</h6>
               <h6 id="total-price" class="inter-font text-base font-bold">BDT <span id="total-price-span"></span></h6>
             </div>
+            <div id="discount-price" class="hidden flex justify-between px-12 py-4">
+              <!-- Discount Price will be shown here -->
+              <h6 class="inter-font text-base font-bold">Discount Price</h6>
+              <h6 id="total-price" class="inter-font text-base font-bold">BDT <span id="total-price-span"></span></h6>
+            </div>
             <div class="flex px-12 py-4 justify-center">
-              <input id="coupon-form" type="text" placeholder="Have any copupon?" class="rounded-tl-lg p-2 w-96">
-              <button id="coupon-btn" class="btn bg-[#1DD100] text-white">Apply</button>
+              <input id="coupon-form" type="text" placeholder="Have any copupon?" class="rounded-lg p-2 w-96">
+              <button id="coupon-btn" class="btn bg-[#1DD100] text-white" disabled>Apply</button>
             </div>
             <div class="flex justify-between px-12 py-4">
               <h6 class="inter-font text-base font-bold">Grand Total</h6>
