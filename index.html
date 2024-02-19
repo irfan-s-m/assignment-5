@@ -260,7 +260,7 @@
               <h6 class="inter-font text-base font-medium">Price</h6>
             </div>
             <hr>
-            <div id="seat-table" class="grid grid-cols-3 gap-6 px-12 py-4">
+            <div id="seat-table" class="grid grid-cols-3 gap-6 px-16 py-4">
               <!-- Here the updated Seat list will append -->
             </div>
             <hr>
@@ -274,7 +274,8 @@
               <h6 class="inter-font text-base font-bold">BDT <span id="discount-price-span"></span></h6>
             </div>
             <div id="coupon" class="flex px-12 py-4 justify-center">
-              <input id="coupon-form" type="text" placeholder="Have any copupon?" class="rounded-lg p-2 w-96 border-slate-300 border-solid border-2">
+              <input id="coupon-form" type="text" placeholder="Have any copupon?"
+                class="rounded-lg p-2 w-96 border-slate-300 border-solid border-2">
               <button id="coupon-btn" class="btn bg-[#1DD100] text-white" disabled>Apply</button>
             </div>
             <div class="flex justify-between px-12 py-4">
@@ -283,12 +284,15 @@
             </div>
           </div>
           <div class="flex flex-col gap-6 mt-6">
-            <h3>Passenger Name *</h3>
-            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="text" name="" id="" placeholder="Enter Your Name">
-            <h3>Phone Number *</h3>
-            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="number" name="" id="number-form" placeholder="Enter Your Name">
-            <h3>Email ID</h3>
-            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="text" name="" id="" placeholder="Enter Your Name">
+            <h3 class="text-base font-semibold">Passenger Name *</h3>
+            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="text" name="" id=""
+              placeholder="Enter Your Name">
+            <h3 class="text-base font-semibold">Phone Number *</h3>
+            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="number" name=""
+              id="number-form" placeholder="Enter Your Phone Number">
+            <h3 class="text-base font-semibold">Email ID</h3>
+            <input class="w-full p-4 rounded-lg border-slate-300 border-solid border-2" type="email" name="" id=""
+              placeholder="Enter Your Email ID">
 
           </div>
           <!-- Modal -->
@@ -306,17 +310,13 @@
               </div>
               <div class="modal-action flex justify-center items-center">
                 <form method="dialog">
-                  <button id="modal-btn" class="btn rounded-3xl w-72 bg-[#27AE60] text-white text-xl font-medium">Continue</button>
+                  <button id="modal-btn"
+                    class="btn rounded-3xl w-72 bg-[#27AE60] text-white text-xl font-medium">Continue</button>
                 </form>
               </div>
             </div>
           </dialog>
         </div>
-
-
-
-
-
       </div>
     </section>
   </main>

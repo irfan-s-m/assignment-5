@@ -76,18 +76,24 @@ for (const seat of seatbuttons) {
 
 // Modal main button enable
 const numberForm = document.getElementById('number-form');
-const numberFormValue = numberForm.value;
-if (numberFormValue.length > 1) {
-    const modalButton = document.getElementById('modal-main-btn');
-    modalButton.removeAttribute('disabled', true);
-}
+numberForm.addEventListener('keyup', function (event) {
+    const numberFormValue = event.target.value;
+    if (numberFormValue >= 1) {
+        const modalButton = document.getElementById('modal-main-btn');
+        modalButton.removeAttribute('disabled', true);
+    }
+    else if (numberFormValue < 1) {
+        const modalButton = document.getElementById('modal-main-btn');
+        modalButton.setAttribute('disabled', true);
+    }
+})
 
 
 // Modal button reset
 const reset = document.getElementById('modal-btn');
-reset.addEventListener('click', function (){
+reset.addEventListener('click', function () {
     window.location.reload();
-} )
+})
 
 // innerText function
 function setInnerTextValue(id, text) {
