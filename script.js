@@ -47,27 +47,31 @@ for (const seat of seatbuttons) {
         // coupon discount
         const couponBtn = document.getElementById('coupon-btn');
         couponBtn.addEventListener('click', function () {
+            const discountContainer = document.getElementById('discount-price');
+            discountContainer.classList.remove('hidden');
             const couponForm = document.getElementById('coupon-form');
             const coupon = couponForm.value;
+            const hideCoupon = document.getElementById('coupon')
+                hideCoupon.classList.add('hidden');
             if (coupon === 'NEW15') {
                 discountPrice = totalPrice * 0.15;
                 grandTotal = totalPrice - discountPrice;
-                console.log(discountPrice);
-                console.log(grandTotal);
+                document.getElementById('discount-price-span').innerText = discountPrice;
+                document.getElementById('grand-total').innerText = grandTotal;
+
             }
             else if (coupon === 'Couple 20') {
                 discountPrice = totalPrice * 0.20;
                 grandTotal = totalPrice - discountPrice;
-                console.log(discountPrice);
-                console.log(grandTotal);
+                document.getElementById('discount-price-span').innerText = discountPrice;
+                document.getElementById('grand-total').innerText = grandTotal;
+                
             }
+
         })
-
-
     })
 
 }
-
 
 
 // innerText function
